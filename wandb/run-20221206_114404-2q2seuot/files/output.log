@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 2156/2156 [00:35<00:00, 61.12it/s]
+Traceback (most recent call last):
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 159, in __getattr__
+    return self.__getitem__(key)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 126, in __getitem__
+    return self._items[key]
+KeyError: 'eps'
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/sin/PycharmProjects/tutorial/dbscan.py", line 93, in <module>
+    dbscan = DBSCAN(eeps = w_config.eps, min_samples= w_config.min_sample).fit(df)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_config.py", line 163, in __getattr__
+    ) from ke
+AttributeError: '<class 'wandb.sdk.wandb_config.Config'>' object has no attribute 'eps'

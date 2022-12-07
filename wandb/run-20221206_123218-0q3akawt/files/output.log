@@ -1,0 +1,10 @@
+0
+0.02
+<class 'float'>
+1
+-1    2156
+dtype: int64
+/home/sin/PycharmProjects/tutorial/dbscan.py:110: UserWarning: Starting a Matplotlib GUI outside of the main thread will likely fail.
+  plt.figure(figsize=(12, 12))
+/home/sin/PycharmProjects/tutorial/dbscan.py:115: UserWarning: Starting a Matplotlib GUI outside of the main thread will likely fail.
+  fig, axes = plt.subplots(nrows=1, ncols=4, sharey=True, figsize=(20, 10))

@@ -1,0 +1,17 @@
+wandb_version: 1
+
+eps:
+  value:
+  - 0.1
+  - 0.01
+  - 0.02
+  - 0.03
+  - 0.04
+  - 0.05
+min_sample:
+  value:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10

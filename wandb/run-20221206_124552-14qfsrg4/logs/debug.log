@@ -1,0 +1,48 @@
+2022-12-06 12:45:52,067 INFO    Thread-14 :2531907 [wandb_setup.py:_flush():68] Configure stats pid to 2531907
+2022-12-06 12:45:52,068 INFO    Thread-14 :2531907 [wandb_setup.py:_flush():68] Loading settings from /home/sin/.config/wandb/settings
+2022-12-06 12:45:52,068 INFO    Thread-14 :2531907 [wandb_setup.py:_flush():68] Loading settings from /home/sin/PycharmProjects/tutorial/wandb/settings
+2022-12-06 12:45:52,068 INFO    Thread-14 :2531907 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'entity': 'sb2539', 'project': 'dbscan_demo_outlier', 'root_dir': '/home/sin/PycharmProjects/tutorial', 'run_id': '14qfsrg4', 'sweep_param_path': '/home/sin/PycharmProjects/tutorial/wandb/sweep-7fwowmod/config-14qfsrg4.yaml', 'sweep_id': '7fwowmod'}
+2022-12-06 12:45:52,068 INFO    Thread-14 :2531907 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'dbscan.py', 'program': '/home/sin/PycharmProjects/tutorial/dbscan.py'}
+2022-12-06 12:45:52,068 INFO    Thread-14 :2531907 [wandb_init.py:_log_setup():476] Logging user logs to /home/sin/PycharmProjects/tutorial/wandb/run-20221206_124552-14qfsrg4/logs/debug.log
+2022-12-06 12:45:52,068 INFO    Thread-14 :2531907 [wandb_init.py:_log_setup():477] Logging internal logs to /home/sin/PycharmProjects/tutorial/wandb/run-20221206_124552-14qfsrg4/logs/debug-internal.log
+2022-12-06 12:45:52,069 INFO    Thread-14 :2531907 [wandb_init.py:init():516] calling init triggers
+2022-12-06 12:45:52,069 INFO    Thread-14 :2531907 [wandb_init.py:init():520] wandb.init called with sweep_config: {'eps': 0.08, 'min_sample': 10}
+config: {}
+2022-12-06 12:45:52,069 INFO    Thread-14 :2531907 [wandb_init.py:init():569] starting backend
+2022-12-06 12:45:52,069 INFO    Thread-14 :2531907 [wandb_init.py:init():573] setting up manager
+2022-12-06 12:45:52,078 INFO    Thread-14 :2531907 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-12-06 12:45:52,084 INFO    Thread-14 :2531907 [wandb_init.py:init():580] backend started and connected
+2022-12-06 12:45:52,091 INFO    Thread-14 :2531907 [wandb_run.py:_config_callback():1160] config_cb None None {'eps': 0.08, 'min_sample': 10}
+2022-12-06 12:45:52,093 INFO    Thread-14 :2531907 [wandb_init.py:init():658] updated telemetry
+2022-12-06 12:45:52,094 INFO    Thread-14 :2531907 [wandb_init.py:init():694] communicating run to backend with 60 second timeout
+2022-12-06 12:45:52,702 INFO    Thread-14 :2531907 [wandb_run.py:_on_init():2000] communicating current version
+2022-12-06 12:45:52,807 INFO    Thread-14 :2531907 [wandb_run.py:_on_init():2004] got version response 
+2022-12-06 12:45:52,808 INFO    Thread-14 :2531907 [wandb_init.py:init():728] starting run threads in backend
+2022-12-06 12:45:56,009 INFO    Thread-14 :2531907 [wandb_run.py:_console_start():1980] atexit reg
+2022-12-06 12:45:56,010 INFO    Thread-14 :2531907 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2022-12-06 12:45:56,010 INFO    Thread-14 :2531907 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2022-12-06 12:45:56,010 INFO    Thread-14 :2531907 [wandb_run.py:_redirect():1925] Redirects installed.
+2022-12-06 12:45:56,011 INFO    Thread-14 :2531907 [wandb_init.py:init():765] run started, returning control to user process
+2022-12-06 12:45:57,241 INFO    Thread-14 :2531907 [wandb_run.py:_finish():1746] finishing run sb2539/dbscan_demo_outlier/14qfsrg4
+2022-12-06 12:45:57,241 INFO    Thread-14 :2531907 [wandb_run.py:_atexit_cleanup():1949] got exitcode: 0
+2022-12-06 12:45:57,241 INFO    Thread-14 :2531907 [wandb_run.py:_restore():1932] restore
+2022-12-06 12:45:57,241 INFO    Thread-14 :2531907 [wandb_run.py:_restore():1938] restore done
+2022-12-06 12:46:01,734 INFO    Thread-14 :2531907 [wandb_run.py:_restore():1932] restore
+2022-12-06 12:46:01,734 INFO    Thread-14 :2531907 [wandb_run.py:_restore():1938] restore done
+2022-12-06 12:46:01,734 ERROR   Thread-14 :2531907 [wandb_run.py:_atexit_cleanup():1970] Problem finishing run
+Traceback (most recent call last):
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1958, in _atexit_cleanup
+    self._on_finish()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 2294, in _on_finish
+    self._backend.cleanup()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 252, in cleanup
+    self.interface.join()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 576, in join
+    self._router.join()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/interface/router.py", line 100, in join
+    self._thread.join()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/threading.py", line 1044, in join
+    self._wait_for_tstate_lock()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/threading.py", line 1060, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+Exception

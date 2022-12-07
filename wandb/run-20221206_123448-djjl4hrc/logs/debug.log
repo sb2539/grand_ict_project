@@ -1,0 +1,79 @@
+2022-12-06 12:34:48,040 INFO    Thread-14 :2528701 [wandb_setup.py:_flush():68] Configure stats pid to 2528701
+2022-12-06 12:34:48,041 INFO    Thread-14 :2528701 [wandb_setup.py:_flush():68] Loading settings from /home/sin/.config/wandb/settings
+2022-12-06 12:34:48,041 INFO    Thread-14 :2528701 [wandb_setup.py:_flush():68] Loading settings from /home/sin/PycharmProjects/tutorial/wandb/settings
+2022-12-06 12:34:48,041 INFO    Thread-14 :2528701 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'entity': 'sb2539', 'project': 'dbscan_demo_outlier', 'root_dir': '/home/sin/PycharmProjects/tutorial', 'run_id': 'djjl4hrc', 'sweep_param_path': '/home/sin/PycharmProjects/tutorial/wandb/sweep-1imfim3k/config-djjl4hrc.yaml', 'sweep_id': '1imfim3k'}
+2022-12-06 12:34:48,041 INFO    Thread-14 :2528701 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'dbscan.py', 'program': '/home/sin/PycharmProjects/tutorial/dbscan.py'}
+2022-12-06 12:34:48,041 INFO    Thread-14 :2528701 [wandb_init.py:_log_setup():476] Logging user logs to /home/sin/PycharmProjects/tutorial/wandb/run-20221206_123448-djjl4hrc/logs/debug.log
+2022-12-06 12:34:48,041 INFO    Thread-14 :2528701 [wandb_init.py:_log_setup():477] Logging internal logs to /home/sin/PycharmProjects/tutorial/wandb/run-20221206_123448-djjl4hrc/logs/debug-internal.log
+2022-12-06 12:34:48,042 INFO    Thread-14 :2528701 [wandb_init.py:init():516] calling init triggers
+2022-12-06 12:34:48,042 INFO    Thread-14 :2528701 [wandb_init.py:init():520] wandb.init called with sweep_config: {'eps': 0.2, 'min_sample': 10}
+config: {}
+2022-12-06 12:34:48,042 INFO    Thread-14 :2528701 [wandb_init.py:init():569] starting backend
+2022-12-06 12:34:48,042 INFO    Thread-14 :2528701 [wandb_init.py:init():573] setting up manager
+2022-12-06 12:34:48,050 INFO    Thread-14 :2528701 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-12-06 12:34:48,055 INFO    Thread-14 :2528701 [wandb_init.py:init():580] backend started and connected
+2022-12-06 12:34:48,060 INFO    Thread-14 :2528701 [wandb_run.py:_config_callback():1160] config_cb None None {'eps': 0.2, 'min_sample': 10}
+2022-12-06 12:34:48,063 INFO    Thread-14 :2528701 [wandb_init.py:init():658] updated telemetry
+2022-12-06 12:34:48,064 INFO    Thread-14 :2528701 [wandb_init.py:init():694] communicating run to backend with 60 second timeout
+2022-12-06 12:34:48,670 INFO    Thread-14 :2528701 [wandb_run.py:_on_init():2000] communicating current version
+2022-12-06 12:34:48,795 INFO    Thread-14 :2528701 [wandb_run.py:_on_init():2004] got version response 
+2022-12-06 12:34:48,795 INFO    Thread-14 :2528701 [wandb_init.py:init():728] starting run threads in backend
+2022-12-06 12:34:52,236 INFO    Thread-14 :2528701 [wandb_run.py:_console_start():1980] atexit reg
+2022-12-06 12:34:52,236 INFO    Thread-14 :2528701 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2022-12-06 12:34:52,236 INFO    Thread-14 :2528701 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2022-12-06 12:34:52,237 INFO    Thread-14 :2528701 [wandb_run.py:_redirect():1925] Redirects installed.
+2022-12-06 12:34:52,237 INFO    Thread-14 :2528701 [wandb_init.py:init():765] run started, returning control to user process
+2022-12-06 12:34:53,119 INFO    Thread-14 :2528701 [wandb_run.py:_finish():1746] finishing run sb2539/dbscan_demo_outlier/djjl4hrc
+2022-12-06 12:34:53,120 INFO    Thread-14 :2528701 [wandb_run.py:_atexit_cleanup():1949] got exitcode: 1
+2022-12-06 12:34:53,120 INFO    Thread-14 :2528701 [wandb_run.py:_restore():1932] restore
+2022-12-06 12:34:53,120 INFO    Thread-14 :2528701 [wandb_run.py:_restore():1938] restore done
+2022-12-06 12:34:59,516 INFO    Thread-14 :2528701 [wandb_run.py:_restore():1932] restore
+2022-12-06 12:34:59,516 INFO    Thread-14 :2528701 [wandb_run.py:_restore():1938] restore done
+2022-12-06 12:34:59,516 ERROR   Thread-14 :2528701 [wandb_run.py:_atexit_cleanup():1970] Problem finishing run
+Traceback (most recent call last):
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/agents/pyagent.py", line 298, in _run_job
+    self._function()
+  File "/home/sin/PycharmProjects/tutorial/dbscan.py", line 123, in run_sweep
+    'figure':fig
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 292, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 255, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1609, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1391, in _log
+    self._partial_history_callback(data, step, commit)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1280, in _partial_history_callback
+    publish_step=not_using_tensorboard,
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 542, in publish_partial_history
+    data = history_dict_to_json(run, data, step=user_step, ignore_copy_err=True)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/data_types/utils.py", line 53, in history_dict_to_json
+    run, key, val, namespace=step, ignore_copy_err=ignore_copy_err
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/data_types/utils.py", line 80, in val_to_json
+    val = Plotly.make_plot_media(val)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/data_types/plotly.py", line 48, in make_plot_media
+    val = util.matplotlib_to_plotly(val)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/util.py", line 604, in matplotlib_to_plotly
+    "plotly is required to log interactive plots, install with: "
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/util.py", line 350, in get_module
+    raise wandb.Error(required)
+wandb.errors.Error: plotly is required to log interactive plots, install with: `pip install plotly` or convert the plot to an image with `wandb.Image(plt)`
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1958, in _atexit_cleanup
+    self._on_finish()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 2294, in _on_finish
+    self._backend.cleanup()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 252, in cleanup
+    self.interface.join()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 576, in join
+    self._router.join()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/sdk/interface/router.py", line 100, in join
+    self._thread.join()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/threading.py", line 1044, in join
+    self._wait_for_tstate_lock()
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/threading.py", line 1060, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+Exception

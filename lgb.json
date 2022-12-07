@@ -1,0 +1,28 @@
+{
+  "data":{
+    "name": "Skoltech_Anomaly_Benchmark",
+    "path": "data/Skoltech/SKAB/valve1/valve1.csv"
+  },
+
+  "preprocess" :"StandardScaler",
+
+  "model" : {
+    "type": "LightGBM",
+    "params": {
+      "lr" : [-2, 0],
+      "objective":["binary"] ,
+      "metric": ["binary_error"],
+      "seed": 0,
+      "max_depth": [3,31],
+      "min_data_in_leaf": [1,21],
+      "num_leaves":[20,41]
+    }
+  },
+  "Training": {
+    "HPO": ["random", "grid"],
+    "metric" : "accurate"
+  },
+  "Evaluation": {
+    "metric": ["F1_score", "accurate"]
+  }
+}

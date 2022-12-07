@@ -1,0 +1,231 @@
+{
+    "os": "Linux-5.15.0-50-generic-x86_64-with-debian-bullseye-sid",
+    "python": "3.7.13",
+    "heartbeatAt": "2022-12-06T05:54:02.121072",
+    "startedAt": "2022-12-06T05:54:01.271103",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/sin/PycharmProjects/tutorial/dbscan.py",
+    "codePath": "dbscan.py",
+    "host": "sin-desktop",
+    "username": "sin",
+    "executable": "/home/sin/anaconda3/envs/semi/bin/python",
+    "cpu_count": 20,
+    "cpu_count_logical": 40,
+    "cpu_freq": {
+        "current": 1238.280875,
+        "min": 1200.0,
+        "max": 3400.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1300.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1489.607,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1300.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1700.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1600.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1300.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1300.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1800.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3400.0
+        }
+    ],
+    "disk": {
+        "total": 1234.2947540283203,
+        "used": 359.24825286865234
+    },
+    "memory": {
+        "total": 31.266002655029297
+    }
+}

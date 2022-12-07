@@ -1,0 +1,5 @@
+wandb:
+wandb: Plotting Clusterer.
+wandb: WARNING using only the first 1000 datapoints to create chart silhouette
+[ 0  0  0 ...  0  0 -1]
+wandb: Logged silhouette plot.

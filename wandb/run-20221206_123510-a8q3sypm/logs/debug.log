@@ -1,0 +1,46 @@
+2022-12-06 12:35:10,872 INFO    Thread-3  :2529251 [wandb_setup.py:_flush():68] Configure stats pid to 2529251
+2022-12-06 12:35:10,872 INFO    Thread-3  :2529251 [wandb_setup.py:_flush():68] Loading settings from /home/sin/.config/wandb/settings
+2022-12-06 12:35:10,872 INFO    Thread-3  :2529251 [wandb_setup.py:_flush():68] Loading settings from /home/sin/PycharmProjects/tutorial/wandb/settings
+2022-12-06 12:35:10,873 INFO    Thread-3  :2529251 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'entity': 'sb2539', 'project': 'dbscan_demo_outlier', 'root_dir': '/home/sin/PycharmProjects/tutorial', 'sweep_id': '4sl4yqk9', 'run_id': 'a8q3sypm', 'sweep_param_path': '/home/sin/PycharmProjects/tutorial/wandb/sweep-4sl4yqk9/config-a8q3sypm.yaml'}
+2022-12-06 12:35:10,873 INFO    Thread-3  :2529251 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'dbscan.py', 'program': '/home/sin/PycharmProjects/tutorial/dbscan.py'}
+2022-12-06 12:35:10,873 INFO    Thread-3  :2529251 [wandb_init.py:_log_setup():476] Logging user logs to /home/sin/PycharmProjects/tutorial/wandb/run-20221206_123510-a8q3sypm/logs/debug.log
+2022-12-06 12:35:10,873 INFO    Thread-3  :2529251 [wandb_init.py:_log_setup():477] Logging internal logs to /home/sin/PycharmProjects/tutorial/wandb/run-20221206_123510-a8q3sypm/logs/debug-internal.log
+2022-12-06 12:35:10,874 INFO    Thread-3  :2529251 [wandb_init.py:init():516] calling init triggers
+2022-12-06 12:35:10,874 INFO    Thread-3  :2529251 [wandb_init.py:init():520] wandb.init called with sweep_config: {'eps': 0.2, 'min_sample': 10}
+config: {}
+2022-12-06 12:35:10,874 INFO    Thread-3  :2529251 [wandb_init.py:init():569] starting backend
+2022-12-06 12:35:10,874 INFO    Thread-3  :2529251 [wandb_init.py:init():573] setting up manager
+2022-12-06 12:35:10,881 INFO    Thread-3  :2529251 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-12-06 12:35:10,887 INFO    Thread-3  :2529251 [wandb_init.py:init():580] backend started and connected
+2022-12-06 12:35:10,892 INFO    Thread-3  :2529251 [wandb_run.py:_config_callback():1160] config_cb None None {'eps': 0.2, 'min_sample': 10}
+2022-12-06 12:35:10,894 INFO    Thread-3  :2529251 [wandb_init.py:init():658] updated telemetry
+2022-12-06 12:35:10,895 INFO    Thread-3  :2529251 [wandb_init.py:init():694] communicating run to backend with 60 second timeout
+2022-12-06 12:35:11,527 INFO    Thread-3  :2529251 [wandb_run.py:_on_init():2000] communicating current version
+2022-12-06 12:35:11,655 INFO    Thread-3  :2529251 [wandb_run.py:_on_init():2004] got version response 
+2022-12-06 12:35:11,655 INFO    Thread-3  :2529251 [wandb_init.py:init():728] starting run threads in backend
+2022-12-06 12:35:15,008 INFO    Thread-3  :2529251 [wandb_run.py:_console_start():1980] atexit reg
+2022-12-06 12:35:15,009 INFO    Thread-3  :2529251 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2022-12-06 12:35:15,009 INFO    Thread-3  :2529251 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2022-12-06 12:35:15,009 INFO    Thread-3  :2529251 [wandb_run.py:_redirect():1925] Redirects installed.
+2022-12-06 12:35:15,010 INFO    Thread-3  :2529251 [wandb_init.py:init():765] run started, returning control to user process
+2022-12-06 12:35:15,789 ERROR   Thread-3  :2529251 [util.py:get_module():348] Error importing optional module plotly.tools
+Traceback (most recent call last):
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/site-packages/wandb/util.py", line 343, in get_module
+    return import_module(name)
+  File "/home/sin/anaconda3/envs/semi/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'plotly'
+2022-12-06 12:35:15,790 INFO    Thread-3  :2529251 [wandb_run.py:_finish():1746] finishing run sb2539/dbscan_demo_outlier/a8q3sypm
+2022-12-06 12:35:15,790 INFO    Thread-3  :2529251 [wandb_run.py:_atexit_cleanup():1949] got exitcode: 1
+2022-12-06 12:35:15,790 INFO    Thread-3  :2529251 [wandb_run.py:_restore():1932] restore
+2022-12-06 12:35:15,790 INFO    Thread-3  :2529251 [wandb_run.py:_restore():1938] restore done
+2022-12-06 12:35:20,546 INFO    Thread-3  :2529251 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-12-06 12:35:20,546 INFO    Thread-3  :2529251 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-12-06 12:35:20,548 INFO    Thread-3  :2529251 [wandb_run.py:_footer_sync_info():3333] logging synced files

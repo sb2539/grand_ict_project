@@ -1,0 +1,5 @@
+
+wandb: n_clusters attribute not in classifier. Cannot plot elbow method.
+ 0    2154
+-1       2
+dtype: int64
