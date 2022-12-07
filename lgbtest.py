@@ -207,9 +207,10 @@ if __name__ == '__main__':
     test_x = pd.DataFrame(test_x_win, columns=features)
     print(train_x)
     results_list = []
+    results_showed = []
     if hypo == "random":
         # Ramdom search for hyper parameter
-        optimization_trial = 100
+        optimization_trial = 10
 
         results_val_acc = {}
         results_train_acc = {}
@@ -250,23 +251,33 @@ if __name__ == '__main__':
     print("=========== Hyper-Parameter Optimization Result ===========")
     i = 0
     best_parm = []
+    for_showed_parm = []
     for key, val_acc in sorted(results_val_acc.items(), key=lambda x: x[1], reverse=True):
 
         print("Best-" + str(i + 1) + "(val acc:" + str(val_acc) + ")| " + key)
+        for_showed_parm.append(key)
         if i ==0:
             best_parm.append(key)
         i += 1
 
-        if i >= int(optimization_trial * 0.05):
+        if i >= int(optimization_trial * 0.5):
             break
+    print(for_showed_parm)
+    for j in range(5):
+        split_best_showed = for_showed_parm[j].split(",")
+    print(split_best_showed)
+        # inter_showed = split_best_showed[j].split(":")
+        # results_showed.append(float(inter_showed[1]))
 
+    print("temp:", results_showed)
     str_split_best_parm = best_parm[0].split(",")
+    print("==============Choosed best parameter ================")
     print("best_parm:",best_parm)
     for i in range(4):
         final_split_best_parm = str_split_best_parm[i].split(":")
         results_list.append(float(final_split_best_parm[1]))
-    print(final_split_best_parm)
-    print(results_list)
+
+    print("choosed parameter values:",results_list)
 
     # fine-tunned hyper paramter
     lgb_params = {'objective': 'binary',
