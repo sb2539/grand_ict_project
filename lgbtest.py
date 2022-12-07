@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import GridSearchCV
 import json
 import random
 import os
@@ -21,26 +22,25 @@ np.random.seed(0)
 random.seed(0)
 os.environ["PYTHONHASHSEED"] = "0"
 
-with open('lgb.json', 'r') as file:
+with open('lgb１.json', 'r') as file:
     lgbjson = json.load(file)
-    datapath = lgbjson["data"]["path"]
-    preprocess = lgbjson["preprocess"]
+    datapath = lgbjson["load_dataset"]["args"]["path"]["data"]
+    preprocess = lgbjson["preprocess"]["args"]["type"]["data"]
     if preprocess == "StandardScaler":
         sc = StandardScaler()
-    lgb_model = lgbjson["model"]["type"]
-    parm = lgbjson["model"]['params']
-    min_lr = parm["lr"][1]
-    max_lr = parm["lr"][0]
-    object = parm["objective"][0]
-    metric = parm["metric"][0]
-    seed = parm["seed"]
-    min_max_depth = parm["max_depth"][0]
-    max_max_depth = parm["max_depth"][1]
-    min_min_data_in_leaf = parm["min_data_in_leaf"][0]
-    max_min_data_in_leaf = parm["min_data_in_leaf"][1]
-    min_num_leaf = parm["num_leaves"][0]
-    max_num_leaf = parm["num_leaves"][1]
-    hpo = lgbjson["Training"]["HPO"]
+    parm = lgbjson["create_LightGBM"]['args']
+    min_lr = parm["lr"]["data"][1]
+    max_lr = parm["lr"]["data"][0]
+    object = parm["objective"]["data"][0]
+    metric = parm["metric"]["data"][0]
+    seed = parm["seed"]["data"]
+    min_max_depth = parm["max_depth"]["data"][0]
+    max_max_depth = parm["max_depth"]["data"][1]
+    min_min_data_in_leaf = parm["min_data_in_leaf"]["data"][0]
+    max_min_data_in_leaf = parm["min_data_in_leaf"]["data"][1]
+    min_num_leaf = parm["num_leaves"]["data"][0]
+    max_num_leaf = parm["num_leaves"]["data"][1]
+    hpo = lgbjson["train"]["args"]["search"]["data"][0]
 
 # *** split into free and anomaly ***
 def free_anomaly_split(X, Y):
@@ -120,11 +120,7 @@ if __name__ == '__main__':
     parser.add_argument("--HPO", default="random")
     args = parser.parse_args()
     if args.HPO == "random":
-        hypo = hpo[0]
-    elif args.HPO == "grid":
-        hypo = hpo[1]
-
-    assert hypo == "random", 'Model has a lot of parameter combinations, Please use random metric for HPO'
+        hypo = hpo
 
     valve1_data = pd.read_csv(datapath)
     print(valve1_data)
@@ -265,8 +261,7 @@ if __name__ == '__main__':
             break
 
     str_split_best_parm = best_parm[0].split(",")
-    print(best_parm)
-    print(str_split_best_parm)
+    print("best_parm:",best_parm)
     for i in range(4):
         final_split_best_parm = str_split_best_parm[i].split(":")
         results_list.append(float(final_split_best_parm[1]))

@@ -1,0 +1,100 @@
+{
+"load_dataset": {
+        "id": 0,
+        "args": {
+          "type": {
+            "data": "multivariable",
+            "requires_tuning" : false
+          },
+          "path": {
+            "data": "data/Skoltech/SKAB/valve1/valve1.csv",
+            "sep" : ";",
+            "requires_tuning" : false
+          },
+          "column_name": {
+            "data": ["Accelerometer1RMS", "Accelerometer2RMS", "Current", "Pressure", "Temperature", "Thermocouple", "Voltage", "Volume Flow RateRMS", "anomaly", "changepoint"],
+            "requires_tuning" : false
+          },
+          "input_column" : {
+            "data" : ["Accelerometer1RMS", "Accelerometer2RMS", "Current", "Pressure", "Temperature", "Thermocouple", "Voltage", "Volume Flow RateRMS"],
+            "requires_tuning" : false
+          },
+          "target_column": {
+            "data": ["anomaly"],
+            "requires_tuning" : false
+          }
+        },
+    "inputs" : [],
+    "outputs" : [1]
+  },
+
+  "preprocess" : {
+    "id" : 1,
+    "args": {
+      "type" :{
+        "data" : "StandardScaler",
+        "requires_tuning": false
+      }
+    },
+    "inputs" : [0],
+    "outputs" : [3]
+  },
+
+  "create_LightGBM" : {
+    "id" : 2,
+    "args" : {
+        "lr" : {
+          "data" :[-2, 0],
+          "requires_tuning" : true
+      },
+        "objective": {
+          "data" : ["binary"],
+          "requires_tuning" : false
+        },
+        "metric": {
+          "data": ["binary_error"],
+          "requires_tuning" : false
+        },
+        "seed": {
+          "data": [0],
+          "requires_tuning" : false
+        },
+        "max_depth": {
+          "data": [3,31],
+          "requires_tuning" : true
+        },
+        "min_data_in_leaf": {
+          "data" : [1,21],
+          "requires_tuning" : true
+        },
+        "num_leaves":{
+          "data" : [20, 41],
+          "requires_tuning" : true
+        }
+    },
+    "inputs" : [],
+    "outputs" : [3]
+  },
+  "train": {
+    "id": 3,
+    "args": {
+      "search": {
+        "data": ["random"],
+        "requires_tuning" : false
+      }
+    },
+    "inputs": [1, 2],
+    "outputs": [4]
+  },
+  "eval": {
+    "id": 4,
+    "args": {
+      "metric": {
+        "data": ["F1_score", "accurate"],
+        "requires_tuning" : false
+      }
+    },
+    "inputs": [1, 3],
+    "outputs" : []
+  }
+}
