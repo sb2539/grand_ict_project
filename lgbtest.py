@@ -126,21 +126,6 @@ if __name__ == '__main__':
 
     assert hypo == "random", 'Model has a lot of parameter combinations, Please use random metric for HPO'
 
-    # data read and concat
-#     all_files=[]
-#     for dirname,_,filenames in os.walk('data/Skoltech/SKAB'):
-#         for filename in filenames:
-#             if filename.endswith('csv'):
-#                 all_files.append(f'{dirname}/{filename}')
-#     all_files.sort()
-#
-#     valve1_dat={file.split('/')[-1]:pd.read_csv(file,sep=';',index_col='datetime',parse_dates=True)
-#                 for file in all_files if 'valve1' in file}
-#
-# #concatenate data(order in time series by sort_index)
-#     valve1_data=pd.concat(list(valve1_dat.values()),axis=0).sort_index()
-#     valve1_data.to_csv("valve1.csv", index=False)
-
     valve1_data = pd.read_csv(datapath)
     print(valve1_data)
     train_pre=valve1_data
@@ -173,10 +158,6 @@ if __name__ == '__main__':
         x_train_win[:, i] = smooth_curve(x_train.values[:, i].flatten())
         x_valid_win[:, i] = smooth_curve(x_valid.values[:, i].flatten())
         x_test_win[:, i] = smooth_curve(x_test.values[:, i].flatten())
-    # x_train_free,x_train_anomaly=free_anomaly_split(x_train.values,y_train)
-    # x_valid_free,x_valid_anomaly=free_anomaly_split(x_valid.values,y_valid)
-    # x_test_free,x_test_anomaly=free_anomaly_split(x_test.values,y_test)
-
 
     x_train_std = sc.fit_transform(x_train_win)
     x_valid_std = sc.transform(x_valid_win)
@@ -283,7 +264,6 @@ if __name__ == '__main__':
         if i >= int(optimization_trial * 0.05):
             break
 
-        #temp_split = best_parm[0]
     str_split_best_parm = best_parm[0].split(",")
     print(best_parm)
     print(str_split_best_parm)
@@ -292,7 +272,6 @@ if __name__ == '__main__':
         results_list.append(float(final_split_best_parm[1]))
     print(final_split_best_parm)
     print(results_list)
-        # print(final_split_best_parm)
 
     # fine-tunned hyper paramter
     lgb_params = {'objective': 'binary',
